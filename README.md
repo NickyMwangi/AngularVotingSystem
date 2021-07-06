@@ -1,4 +1,5 @@
-# VotingDemo
+# Angular 12 Voting System
+The project is developed using Angular 12, Node 16 and Express. Alsp Pusher is used to implement realtime updates when a person votes.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
