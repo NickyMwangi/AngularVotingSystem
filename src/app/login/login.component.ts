@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   onLogin() {
-    this.router.navigate(['/']);
+    return this.router.navigateByUrl('/vote');
   }
 
 }
