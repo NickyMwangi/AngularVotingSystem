@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ChartType } from 'chart.js';
 import { PusherService } from '../pusher.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-voting',
@@ -10,7 +11,7 @@ import { PusherService } from '../pusher.service';
 })
 export class VotingComponent implements OnInit {
 
-  constructor(private pusher: PusherService, private http: HttpClient) { }
+  constructor(private pusher: PusherService, private http: HttpClient, private tstr: ToastrService) { }
 
   event = 'vote';
   vote = '';
@@ -89,6 +90,7 @@ export class VotingComponent implements OnInit {
         this.voteCount["kevin"] += 1;
       }
       this.chartData = Object.values(this.voteCount);
+      this.tstr.success('You have voted successfully. Only vote for one candidate to avoid disqualification', 'Voting Success');
     });
   }
 

@@ -10,6 +10,7 @@ import { UserProfileComponent } from 'src/app/user-profile/user-profile.componen
 import { VotingComponent } from 'src/app/voting/voting.component';
 import { ChartsModule } from 'ng2-charts';
 import { DashboardComponent } from 'src/app/dashboard/dashboard.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 export const AdminLayoutRoutes: Routes = [
